@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import ulutech from "../../Assets/Projects/ulutech.png";
-import watchit from "../../Assets/Projects/watch it.png";
+import ulutech from "../../assets/Projects/ulutech.png";
+import watchit from "../../assets/Projects/watch it.png";
 
 function Projects() {
   return (

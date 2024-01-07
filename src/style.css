@@ -741,3 +741,13 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+.swiper {
+  height: 100%;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #a24dd386 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #a24dd386 !important;
+}

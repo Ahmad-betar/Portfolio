@@ -1,0 +1,9 @@
+.swiperSlide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.ImageInSlide {
+  width: 100%;
+  height: fit-content;
+}

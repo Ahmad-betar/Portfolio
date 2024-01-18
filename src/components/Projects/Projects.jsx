@@ -116,7 +116,7 @@ function Projects() {
               onOpen={() => setOpen(true)}
               imgPath={rimi3}
               isBlog={false}
-              title="Humy"
+              title="Rimi"
               description="The Rimi Dashboard Control Panel is a robust, user-friendly interface designed to manage and oversee every facet of your application in one centralized location. Built on React, this dashboard offers unparalleled control and accessibility, allowing administrators and users to efficiently monitor, configure, and manipulate various features and functionalities."
               // ghLink="https://github.com/Ahmad-betar/WatchIt"
               demoLink="http://3.214.164.25:93/"

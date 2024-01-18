@@ -50,7 +50,7 @@ function ProjectCards(props) {
             onClick={() => setOpen(true)}
             style={{ marginLeft: "10px" }}
           >
-            <BiSolidShow />
+            <BiSolidShow /> Watch
           </Button>
         </Card.Body>
       </Card>

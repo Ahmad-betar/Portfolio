@@ -34,7 +34,13 @@ import alpha4 from "../../assets/Projects/Alpha/4.png";
 import alpha5 from "../../assets/Projects/Alpha/5.png";
 import alpha6 from "../../assets/Projects/Alpha/6.png";
 import alpha7 from "../../assets/Projects/Alpha/7.png";
-
+import rimi1 from "../../assets/Projects/Rimi/1.png";
+import rimi2 from "../../assets/Projects/Rimi/2.png";
+import rimi3 from "../../assets/Projects/Rimi/3.png";
+import rimi4 from "../../assets/Projects/Rimi/4.png";
+import rimi5 from "../../assets/Projects/Rimi/5.png";
+import rimi6 from "../../assets/Projects/Rimi/6.png";
+import rimi7 from "../../assets/Projects/Rimi/7.png";
 function Projects() {
   const ulutechArray = [
     ulutech1,
@@ -68,7 +74,7 @@ function Projects() {
     salon11,
   ];
   const alphaArray = [alpha1, alpha2, alpha3, alpha4, alpha5, alpha6, alpha7];
-
+  const rimiArray = [rimi1, rimi2, rimi3, rimi4, rimi5, rimi6, rimi7];
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -89,7 +95,7 @@ function Projects() {
               title="Salon Dashboard"
               description="The Salon Dashboard Control Panel is a robust, user-friendly interface designed to manage and oversee every facet of your application in one centralized location. Built on React, this dashboard offers unparalleled control and accessibility, allowing administrators and users to efficiently monitor, configure, and manipulate various features and functionalities."
               // ghLink="https://github.com/Ahmad-betar/WatchIt"
-              // demoLink="https://watch-it-4efz.vercel.app/Home"
+              demoLink="http://3.214.164.25:98/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -102,6 +108,18 @@ function Projects() {
               description="The Alpha Dashboard Control Panel is a robust, user-friendly interface designed to manage and oversee every facet of your application in one centralized location. Built on React, this dashboard offers unparalleled control and accessibility, allowing administrators and users to efficiently monitor, configure, and manipulate various features and functionalities."
               // ghLink="https://github.com/Ahmad-betar/WatchIt"
               // demoLink="https://watch-it-4efz.vercel.app/Home"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              array={rimiArray}
+              onOpen={() => setOpen(true)}
+              imgPath={rimi3}
+              isBlog={false}
+              title="Humy"
+              description="The Rimi Dashboard Control Panel is a robust, user-friendly interface designed to manage and oversee every facet of your application in one centralized location. Built on React, this dashboard offers unparalleled control and accessibility, allowing administrators and users to efficiently monitor, configure, and manipulate various features and functionalities."
+              // ghLink="https://github.com/Ahmad-betar/WatchIt"
+              demoLink="http://3.214.164.25:93/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -128,18 +146,7 @@ function Projects() {
               demoLink="https://watch-it-4efz.vercel.app/Home"
             />
           </Col>
-          {/* <Col md={4} className="project-card">
-            <ProjectCard
-              array={watchitArray}
-              onOpen={() => setOpen(true)}
-              imgPath={watchit1}
-              isBlog={false}
-              title="Humy"
-              description="Watch It is a movies/Series Web page to keep in touch with cinema."
-              ghLink="https://github.com/Ahmad-betar/WatchIt"
-              demoLink="http://3.214.164.25:89/login"
-            />
-          </Col>
+          {/*
           <Col md={4} className="project-card">
             <ProjectCard
               array={watchitArray}

@@ -1,80 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import ulutech1 from "../../assets/Projects/ulutech/ulutech.png";
-import ulutech2 from "../../assets/Projects/ulutech/ulutech2.png";
-import ulutech3 from "../../assets/Projects/ulutech/ulutech3.png";
-import ulutech4 from "../../assets/Projects/ulutech/ulutech4.png";
-import ulutech5 from "../../assets/Projects/ulutech/ulutech5.png";
-import ulutech6 from "../../assets/Projects/ulutech/ulutech6.png";
-import watchit1 from "../../assets/Projects/watchit/watch it.png";
-import watchit2 from "../../assets/Projects/watchit/watchit2.png";
-import watchit3 from "../../assets/Projects/watchit/watchit3.png";
-import watchit4 from "../../assets/Projects/watchit/watchit4.png";
-import watchit5 from "../../assets/Projects/watchit/watchit5.png";
-import watchit6 from "../../assets/Projects/watchit/watchit6.png";
-import watchit7 from "../../assets/Projects/watchit/watchit7.png";
-import salon1 from "../../assets/Projects/Salon/1.png";
-import salon2 from "../../assets/Projects/Salon/2.png";
-import salon3 from "../../assets/Projects/Salon/3.png";
-import salon4 from "../../assets/Projects/Salon/4.png";
-import salon5 from "../../assets/Projects/Salon/5.png";
-import salon6 from "../../assets/Projects/Salon/6.png";
-import salon7 from "../../assets/Projects/Salon/7.png";
-import salon8 from "../../assets/Projects/Salon/8.png";
-import salon9 from "../../assets/Projects/Salon/9.png";
-import salon10 from "../../assets/Projects/Salon/10.png";
-import salon11 from "../../assets/Projects/Salon/11.png";
-import salon12 from "../../assets/Projects/Salon/12.png";
-import alpha1 from "../../assets/Projects/Alpha/1.png";
-import alpha2 from "../../assets/Projects/Alpha/2.png";
-import alpha3 from "../../assets/Projects/Alpha/3.png";
-import alpha4 from "../../assets/Projects/Alpha/4.png";
-import alpha5 from "../../assets/Projects/Alpha/5.png";
-import alpha6 from "../../assets/Projects/Alpha/6.png";
-import alpha7 from "../../assets/Projects/Alpha/7.png";
-import rimi1 from "../../assets/Projects/Rimi/1.png";
-import rimi2 from "../../assets/Projects/Rimi/2.png";
-import rimi3 from "../../assets/Projects/Rimi/3.png";
-import rimi4 from "../../assets/Projects/Rimi/4.png";
-import rimi5 from "../../assets/Projects/Rimi/5.png";
-import rimi6 from "../../assets/Projects/Rimi/6.png";
-import rimi7 from "../../assets/Projects/Rimi/7.png";
+import { getImagesURL, getImagePath } from "./GetImagesURL";
+
 function Projects() {
-  const ulutechArray = [
-    ulutech1,
-    ulutech2,
-    ulutech3,
-    ulutech5,
-    ulutech6,
-    ulutech4,
-  ];
-  const watchitArray = [
-    watchit1,
-    watchit2,
-    watchit3,
-    watchit4,
-    watchit5,
-    watchit6,
-    watchit7,
-  ];
-  const salonArray = [
-    salon1,
-    salon2,
-    salon3,
-    salon4,
-    salon10,
-    salon5,
-    salon6,
-    salon12,
-    salon7,
-    salon8,
-    salon9,
-    salon11,
-  ];
-  const alphaArray = [alpha1, alpha2, alpha3, alpha4, alpha5, alpha6, alpha7];
-  const rimiArray = [rimi1, rimi2, rimi3, rimi4, rimi5, rimi6, rimi7];
+  console.log(getImagePath("humy admin"));
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -88,44 +20,47 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              array={salonArray}
+              array={getImagesURL("humy admin")}
               onOpen={() => setOpen(true)}
-              imgPath={salon2}
+              imgPath={getImagePath("humy admin")}
+              isBlog={false}
+              title="Humy Pioneer"
+              description="Pioneer Dashboard: Empowered kitchen Pioneers to add, edit, and manage their dishes efficiently."
+              // ghLink="https://github.com/Ahmad-betar/WatchIt"
+              demoLink="https://dashboard-pioneer-staging.humyapp.net/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              array={getImagesURL("humy super")}
+              onOpen={() => setOpen(true)}
+              imgPath={getImagePath("humy super")}
+              isBlog={false}
+              title="Humy Super Admin"
+              description="Humy Admin Dashboard: Enabled project administrators to control, modify, and manage all aspects of the application."
+              // ghLink="https://github.com/Ahmad-betar/WatchIt"
+              demoLink="https://dashboard-super-admin-staging.humyapp.net/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              array={getImagesURL("Salon")}
+              onOpen={() => setOpen(true)}
+              imgPath={getImagePath("Salon")}
               isBlog={false}
               title="Salon Dashboard"
               description="The Salon Dashboard Control Panel is a robust, user-friendly interface designed to manage and oversee every facet of your application in one centralized location. Built on React, this dashboard offers unparalleled control and accessibility, allowing administrators and users to efficiently monitor, configure, and manipulate various features and functionalities."
               // ghLink="https://github.com/Ahmad-betar/WatchIt"
-              demoLink="http://3.214.164.25:98/"
+              // demoLink="http://3.214.164.25:98/"
             />
           </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
-              array={alphaArray}
-              onOpen={() => setOpen(true)}
-              imgPath={alpha2}
-              isBlog={false}
-              title="Alpha Dashboard"
-              description="The Alpha Dashboard Control Panel is a robust, user-friendly interface designed to manage and oversee every facet of your application in one centralized location. Built on React, this dashboard offers unparalleled control and accessibility, allowing administrators and users to efficiently monitor, configure, and manipulate various features and functionalities."
-              // ghLink="https://github.com/Ahmad-betar/WatchIt"
-              // demoLink="https://watch-it-4efz.vercel.app/Home"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              array={rimiArray}
-              onOpen={() => setOpen(true)}
-              imgPath={rimi3}
-              isBlog={false}
-              title="Rimi"
-              description="The Rimi Dashboard Control Panel is a robust, user-friendly interface designed to manage and oversee every facet of your application in one centralized location. Built on React, this dashboard offers unparalleled control and accessibility, allowing administrators and users to efficiently monitor, configure, and manipulate various features and functionalities."
-              // ghLink="https://github.com/Ahmad-betar/WatchIt"
-              demoLink="http://3.214.164.25:93/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              array={ulutechArray}
-              imgPath={ulutech1}
+              array={getImagesURL("ulutech")}
+              imgPath={getImagePath("ulutech")}
               onOpen={() => setOpen(true)}
               isBlog={false}
               title="Ulutech Landing Page"
@@ -136,9 +71,9 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              array={watchitArray}
+              array={getImagesURL("watchit")}
               onOpen={() => setOpen(true)}
-              imgPath={watchit1}
+              imgPath={getImagePath("watchit")}
               isBlog={false}
               title="Watch It"
               description="Watch It is a movies/Series Web page to keep in touch with cinema."
@@ -146,19 +81,6 @@ function Projects() {
               demoLink="https://watch-it-4efz.vercel.app/Home"
             />
           </Col>
-          {/*
-          <Col md={4} className="project-card">
-            <ProjectCard
-              array={watchitArray}
-              onOpen={() => setOpen(true)}
-              imgPath={watchit1}
-              isBlog={false}
-              title="Rimi"
-              description="Watch It is a movies/Series Web page to keep in touch with cinema."
-              ghLink="https://github.com/Ahmad-betar/WatchIt"
-              demoLink="http://3.214.164.25:93"
-            />
-          </Col> */}
         </Row>
       </Container>
     </Container>
